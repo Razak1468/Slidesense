@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://slidespect.vercel.app/sitemap.xml
