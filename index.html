@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SlideSpect | NER Soil Moisture</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="logo">S</div><div><b>SlideSpect</b><small>NER Landslide Monitoring</small></div></div>
+  <div class="source"><span></span> NASA SMAP • 9 km</div>
+</header>
+<main>
+  <aside class="sidebar">
+    <p class="eyebrow">EARTH OBSERVATION</p>
+    <h1>Soil Moisture</h1>
+    <p class="muted">Surface soil moisture across Northeast India using NASA's SMAP L4 satellite/model product.</p>
+
+    <label for="date">Observation date</label>
+    <input id="date" type="date">
+    <button id="latest">Use latest available day</button>
+
+    <div class="status">
+      <div><i id="statusDot"></i><b id="status">Loading…</b></div>
+      <small id="statusDate">—</small>
+    </div>
+
+    <div class="legend">
+      <div><b>Soil moisture</b><span>m³/m³</span></div>
+      <div class="bar"></div>
+      <div class="ticks"><span>0.00</span><span>0.15</span><span>0.30</span><span>0.45</span><span>0.60+</span></div>
+    </div>
+
+    <div class="info">
+      <b>Current prototype</b>
+      <p>The map layer is live from NASA GIBS. This is an Earth-observation visualization, not yet the landslide prediction model.</p>
+    </div>
+
+    <div class="buttons">
+      <button id="fit">Fit NER</button>
+      <button id="opacity">Opacity 85%</button>
+    </div>
+
+    <p class="source-links">
+      <a href="https://worldview.earthdata.nasa.gov/" target="_blank">NASA Worldview</a>
+      <a href="https://gibs.earthdata.nasa.gov/layer-metadata/v1.0/" target="_blank">GIBS metadata</a>
+    </p>
+  </aside>
+  <section class="map-area">
+    <div id="map"></div>
+    <div class="map-title">NORTHEAST INDIA</div>
+    <div class="map-note">SMAP L4 surface soil moisture • approximately 9 km grid</div>
+  </section>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
