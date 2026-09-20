@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#35e99a"/><stop offset="1" stop-color="#65d8ff"/></linearGradient></defs>
+<g transform="translate(8 10)">
+<path d="M8 91 55 31l27 34 36-55 62 81H8Z" fill="none" stroke="url(#g)" stroke-width="8" stroke-linejoin="round"/>
+<path d="m40 91 42-39 25 24 18-22 39 37H40Z" fill="#06261f" stroke="#35e99a" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="147" cy="25" r="7" fill="#65d8ff"/>
+<path d="M147 25c15 1 27 8 34 19M147 25c23 1 41 13 52 31M147 25c31 2 54 18 68 42" fill="none" stroke="#65d8ff" stroke-width="4" stroke-linecap="round"/>
+</g>
+<text x="210" y="67" font-family="Arial,Helvetica,sans-serif" font-size="48" font-weight="800" fill="#f4fbf8">Slide<tspan fill="#35e99a">Spect</tspan></text>
+<text x="212" y="92" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#8ba9a0" letter-spacing="1.8">UNDERSTAND THE LAND. SEE THE RISK.</text>
+</svg>
