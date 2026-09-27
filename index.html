@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SlideSpect — Landslide Risk Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="logo">S</div><div><b>SlideSpect</b><span>Landslide Risk Intelligence</span></div></div>
+  <div class="status"><i></i> Live data</div>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <p class="eyebrow">AI + WEATHER + HISTORICAL EVENTS</p>
+    <h1>Understand landslide risk<br><em>before conditions escalate.</em></h1>
+    <p class="sub">A prototype risk intelligence dashboard combining live weather, forecast rainfall, historical landslide evidence and a machine-learning risk model.</p>
+  </div>
+  <div class="search">
+    <input id="place" placeholder="Search a city or region…">
+    <button id="searchBtn">Analyze</button>
+    <button id="locBtn" class="ghost">Use my location</button>
+  </div>
+</section>
+
+<section class="grid">
+  <div class="card risk-card">
+    <div class="cardhead"><span>Current risk estimate</span><small id="updated">—</small></div>
+    <div class="riskrow"><div id="riskRing" class="ring"><strong id="risk">—</strong><span>risk index</span></div>
+      <div class="metrics">
+        <div><span>Temperature</span><b id="temp">—</b></div>
+        <div><span>Humidity</span><b id="humidity">—</b></div>
+        <div><span>Rainfall signal</span><b id="rainSignal">—</b></div>
+        <div><span>Nearby catalog events</span><b id="events">—</b></div>
+      </div>
+    </div>
+    <div id="riskText" class="note">Select a location to analyze.</div>
+  </div>
+
+  <div class="card">
+    <div class="cardhead"><span>Future risk trajectory</span><small>next 7 days</small></div>
+    <canvas id="chart" height="150"></canvas>
+    <div id="futureNote" class="note">Forecast rainfall is fed through the same model to estimate changing risk.</div>
+  </div>
+</section>
+
+<section class="card mapcard">
+  <div class="cardhead"><span>Spatial risk map</span><small>weather-driven prototype grid</small></div>
+  <div id="map"></div>
+  <div class="legend"><span><i class="low"></i> Low</span><span><i class="med"></i> Moderate</span><span><i class="high"></i> High</span><span><i class="severe"></i> Very high</span></div>
+</section>
+
+<section class="grid lower">
+  <div class="card">
+    <div class="cardhead"><span>Why the estimate changed</span><small>model inputs</small></div>
+    <div id="drivers" class="drivers"></div>
+  </div>
+  <div class="card">
+    <div class="cardhead"><span>Historical landslide evidence</span><small>NASA GLC</small></div>
+    <div id="eventList" class="eventslist"></div>
+  </div>
+</section>
+
+<section class="disclaimer">
+  <b>Prototype / research warning.</b> This is not an operational landslide warning service. The current ML model is a demonstration model and has not been validated for public-safety decisions. Weather forecasts are uncertain, and landslide susceptibility depends on local geology, terrain, drainage, soil properties and other factors not fully represented here.
+</section>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
